@@ -1,0 +1,75 @@
+$primary: #FFD466;
+$light:#FCFCFE;
+$danger: #ff4136;
+@import '~bootstrap/scss/bootstrap.scss';
+
+.splash-screen{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+
+#splash-screen-logo{
+  fill:transparent;
+  animation: fill-anim 0.9s ease forwards 2.9s;
+}
+#splash-screen-logo path:first-child{
+  stroke-dasharray: 454.75px;
+  stroke-dashoffset: 454.75px;
+  // stroke-width: 3px;
+  animation: line-anim 2s ease-in-out forwards;
+}
+#splash-screen-logo path:last-child{
+  stroke-dasharray: 311.04px;
+  stroke-dashoffset: 311.04px;
+  // stroke-width: 3px;
+  animation: line-anim 2s ease-in-out forwards 1s;
+}
+ @keyframes line-anim{
+   to{
+     stroke-dashoffset: 0;
+   }
+ }
+
+ @keyframes fill-anim{
+  to{
+    fill: #FFD466;
+  }
+}
+
+
+// Home Screen
+
+@media (min-width:900px) {
+  .max-defination{
+    max-width:500px;
+  }
+}
+
+.link-copier{
+  position:relative;
+  width:100%;
+  .custom-form{
+    padding:5px 20px;
+    width:100%;
+  }
+  .copy-btn{
+    position: absolute;
+    right:0;
+    top:50%;
+    transform: translate(-10px,-50%);
+    border:none;
+    background-color: rgb(223, 223, 223);
+    border-radius: 10px;
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+}
